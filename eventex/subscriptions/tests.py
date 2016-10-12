@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.core import mail
 from eventex.subscriptions.forms import SubscriptionForm
 
 
@@ -34,3 +35,15 @@ class SubscribeTest(TestCase):
         form = self.response.context['form']
         self.assertSequenceEqual(['name', 'cpf', 'email', 'phone'], list(form.fields))
         
+
+class SubscribePostTest(TestCase):
+
+    def setUp(self):
+        data = dict(name='H', cpf='1', email='x@x.com', phone='12')
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        self.assertEqual(302, self.resp.status_code)
+
+    def test_send_subscribe_email(self):
+    	self.assertEqual(1, len(mail.outbox))

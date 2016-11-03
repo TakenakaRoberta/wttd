@@ -132,4 +132,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 
 
-DEFAULT_EMAIL_FROM = 'contato@eventex.com'
+DEFAULT_EMAIL_FROM = 'contato@eventex.com.br'

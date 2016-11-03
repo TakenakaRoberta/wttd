@@ -1,5 +1,8 @@
 # Eventex
 
+[![Build Status](https://travis-ci.org/TakenakaRoberta/wttd.svg?branch=master)](https://travis-ci.org/TakenakaRoberta/wttd)
+[![Code Health](https://landscape.io/github/TakenakaRoberta/wttd/master/landscape.svg?style=flat-square)](https://landscape.io/github/TakenakaRoberta/wttd/master)
+
 Sistema de Eventos encomendado pela Morena
 
 ## Como desenvolver?
